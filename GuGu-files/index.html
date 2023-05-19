@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"/>
+    <title>Bot do GuGu</title>
+</head>
+<body>
+    <header class="logo">
+        <img src="./Imagens/logo.png" weight="" height="90">
+
+        <div class="navbar">
+            <div class="logo"> <a href="">Bot do GuGu</a></div>
+            <ul class="links">
+                <li> <a href="home">Home</a></li>
+                <li> <a href="sobre">Sobre</a></li>
+                <li><a href="services">Serviços</a></li>
+                <li><a href="contact">Contato ao Suporte</a></li>        
+            </ul>
+            <a href="" class="action_btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa-duotone fa-bars"></i>
+            </div>
+
+        </div>  
+        
+        <div class="dropdown_menu open">
+            <li> <a href="home">Home</a></li>
+                <li> <a href="sobre">Sobre</a></li>
+                <li><a href="services">Serviços</a></li>
+                <li><a href="contact">Contato ao Suporte</a></li> 
+                <li> <a href="" class="action_btn">Get Started</a> </li>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <section id="hero">
+                <h1> Wellcome to GuGu Bot</h1>
+                <p> Entre já e consulte a sua ajuda com o Gugu bot</p>
+                <button class="botton"> Peça Já </button> 
+            </section>
+        </div>
+
+    </main>
+    <script>
+        const toggle_btn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon= document.querySelector('.toggle_btn i')
+        const dropdownMenu = document.querySelector('.dropdown_menu')
+
+        toggle_btn.onclick = function () {
+            dropdownMenu.classList.toggle('open')
+            const isOpen = dropdownMenu.contains('open')
+            
+            toggleBtnIcon.classList = isOpen
+              ?  'fa-duotone fa-xmark'
+              :  'fa-duotone fa-bars'
+        }
+    </script>
+    
+</body>
+</html>
